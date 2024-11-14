@@ -1,0 +1,19 @@
+{
+  "name": "screen-tracker",
+  "version": "0.0.0",
+  "description": "An app to track screen time across all devices for quick easy reports.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/cjswayne/screen-tracker.git"
+  },
+  "author": "cjswayne",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cjswayne/screen-tracker/issues"
+  },
+  "homepage": "https://github.com/cjswayne/screen-tracker#readme"
+}
