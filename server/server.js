@@ -45,10 +45,8 @@ app.get('/api/get-usage/:userId', async (req, res) => {
 });
 
 
-connection.on('open', () => {
   app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
   });
-})
 
 

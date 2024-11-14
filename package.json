@@ -4,7 +4,11 @@
   "description": "An app to track screen time across all devices for quick easy reports.",
   "main": "index.js",
   "scripts": {
-    "test": "npm run dev"
+    "start": "cd ./server && npm start",
+    "dev": "concurrently \"cd ./client && npm run dev\" \"cd ./server && npm run dev\"",
+    "install": "concurrently \"cd ./client && npm i\" \"cd ./server && npm i\"",
+    "build":"cd ./client && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -24,5 +28,8 @@
     "mongoose": "^8.8.1",
     "robotjs": "^0.6.0",
     "systeminformation": "^5.23.5"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
   }
 }
