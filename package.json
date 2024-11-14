@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/cjswayne/screen-tracker/issues"
   },
-  "homepage": "https://github.com/cjswayne/screen-tracker#readme"
+  "homepage": "https://github.com/cjswayne/screen-tracker#readme",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "ffi-napi": "^4.0.3",
+    "mongoose": "^8.8.1",
+    "robotjs": "^0.6.0",
+    "systeminformation": "^5.23.5"
+  }
 }
