@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const connection = () => {
     const connection = mongoose.createConnection('mongodb://localhost/screen_time');
@@ -7,10 +7,10 @@ const connection = () => {
         console.log('MongoDB connected');
     });
 
-    connection.on('error', (err) => {
+    connection.on('error', (err) => { 
         console.log('MongoDB connection error:', err);
     });
     return connection;
 };
 
-module.exports = connection;
+export default connection;

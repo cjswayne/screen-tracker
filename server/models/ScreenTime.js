@@ -1,5 +1,5 @@
 // models/ScreenTime.js
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const screenTimeSchema = new mongoose.Schema({
   userId: { type: String, required: true }, // To associate with a user (from authentication)
@@ -9,5 +9,5 @@ const screenTimeSchema = new mongoose.Schema({
   idleTime: { type: Number, default: 0 }, // Idle time (in seconds)
 });
 
-const ScreenTime = mongoose.model('ScreenTime', screenTimeSchema);
-module.exports = ScreenTime;
+const ScreenTime = mongoose.model("ScreenTime", screenTimeSchema);
+export default ScreenTime ;

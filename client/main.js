@@ -1,17 +1,24 @@
-const { app, BrowserWindow } = require('electron');
-const path = require('path');
+import  { app, BrowserWindow } from 'electron';
+import path from 'path';
+
+// Enable live reload for Electron
+import electronReload from 'electron-reload';
+
+electronReload(__dirname, {
+    electron: require.resolve('electron')
+});
 
 function createWindow() {
   const win = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js'), // Optional, for security
-      contextIsolation: true, // Optional, for security
+      preload: path.join(__dirname, 'preload.js'), // Optional
+      contextIsolation: true, // Optional
     },
-  });
+  }); 
 
-  win.loadFile('dist/index.html'); // Load your built HTML file
+  win.loadURL('http://localhost:3000'); // Load the Vite dev server
 }
 
 app.whenReady().then(createWindow);

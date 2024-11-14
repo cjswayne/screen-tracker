@@ -1,14 +1,14 @@
 // backend/index.js
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-const ScreenTime = require('./models/ScreenTime');
-const connection = require('./config/connection');
+import express from 'express';
+import mongoose from 'mongoose';
+import cors from 'cors';
+import bodyParser from 'body-parser';
+import  ScreenTime from './models/ScreenTime.js';
+import connection from './config/connection.js';
 
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 
 
 app.use(cors());
